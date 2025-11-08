@@ -40,6 +40,7 @@ chocho_search/
 ├─ test_search_validation.py                # Automated validation suite
 └─ README.md                                # Project documentation
 
+## Getting Started
 1. Getting Started
 Clone the repository
 git clone <your-repo-url>
