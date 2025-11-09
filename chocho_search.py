@@ -13,9 +13,9 @@ DB_NAME = os.getenv("DB_NAME")
 
     
 
-# Create a connection string
-engine = create_engine("postgresql+psycopg2://chocho_analyst:ChoCho2025!Analytics#ReadOnly@ep-polished-night-aev76ljb.c-2.us-east-2.aws.neon.tech:5432/neondb")
-
+engine = sqlalchemy.create_engine(
+    f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
+)
 # Example query to fetch data from a specific table
 query = "SELECT * FROM products LIMIT 10;"
 df = pd.read_sql_query(query, engine)
