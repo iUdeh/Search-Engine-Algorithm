@@ -1,13 +1,16 @@
 import pandas as pd
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
+import os
 
+# Load .env file
+load_dotenv()
 
-# Database credentials
-user="chocho_analyst"
-password="ChoCho2025!Analytics#ReadOnly"
-host="ep-polished-night-aev76ljb.c-2.us-east-2.aws.neon.tech"
-port=5432
-database="neondb"
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_NAME = os.getenv("DB_NAME")
+
     
 
 # Create a connection string
